@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ChatBuddy — a context-aware AI learning chatbot." />
+  <title>ChatBuddy AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">S</div>
+      <div>
+        <h1>ChatBuddy</h1>
+        <p>Your context-aware learning assistant</p>
+      </div>
+      <button id="new-chat" class="new-chat" type="button">＋ New chat</button>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">✦</div>
+        <h2>What are we learning today?</h2>
+        <p>I remember the conversation as we go. Ask a question, then refer back to something you said earlier.</p>
+        <div class="suggestions">
+          <button class="suggestion" type="button" data-prompt="Explain how a binary search works with an example.">Explain binary search</button>
+          <button class="suggestion" type="button" data-prompt="Give me a simple Java example of an array.">Java array example</button>
+          <button class="suggestion" type="button" data-prompt="Help me make a study plan for this week.">Create a study plan</button>
+        </div>
+      </div>
+    </section>
+
+    <form id="chat-form" class="composer">
+      <textarea id="message" rows="1" maxlength="4000" placeholder="Message ChatBuddy..." aria-label="Your message" required></textarea>
+      <button id="send" type="submit" aria-label="Send message">➤</button>
+      <div class="composer-note">Enter to send · Shift + Enter for a new line</div>
+    </form>
+    <p class="footer-note">ChatBuddy can make mistakes. Check important information.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
